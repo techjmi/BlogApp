@@ -11,7 +11,7 @@ const corsOption={
     crendetials:true 
 }  
 app.use(cors(corsOption)) 
-app.use(express.json())  
+app.use(express.json())    
 app.use("/api", Router)  
 mongoDB().then(()=>{
     app.listen(PORT, ()=>{
