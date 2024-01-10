@@ -2,8 +2,8 @@ const express= require("express")
 const {signup, login, user, FetchUser, UserById} = require("../controller/userController")
 const authMiddle = require("../middleware/userMiddleware")
 // const { upload } = require("../middleware/imageMiddleware")
-const upload =require( '../middleware/imageMiddleware');
-const uploadFile = require("../controller/imageController");
+// const upload =require( '../middleware/imageMiddleware');
+// const uploadFile = require("../controller/imageController");
 const {PostData ,FetchPost, FetchPostById, FetchUserPost}= require("../controller/postController");
 const { UpdatePost, DeletePost } = require("../controller/updateController");
 const {PostComment, fetchComments} = require("../controller/commentController");
@@ -20,8 +20,8 @@ router.route("/delete/:id").delete(DeletePost)
 router.route("/fetchUser").get(FetchUser)
 router.route("/userId/:id").get(UserById)
 router.route("/userpost/:id").get(FetchUserPost)
-router.route("/file/upload")
-  .post(upload.single("file"), uploadFile);
+// router.route("/file/upload")
+//   .post(upload.single("file"), uploadFile);
   ///comment route
   router.route("/comment").post(PostComment)
   router.route("/getcomment/:id").get(fetchComments)
