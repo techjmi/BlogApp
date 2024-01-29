@@ -7,6 +7,8 @@ const PORT=8000
 const cors= require("cors")
 const corsOption={
     origin:"http://localhost:3000",
+    // origin:"*",
+    // origin: "https://659ec9dd19cb6a13dd9fdcde--celadon-cucurucho-4719ae.netlify.app",
     methods:"GET, POST, PUT ,PATCH, DELETE, HEAD",
     // crendetials:true ,
     credentials: true
